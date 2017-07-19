@@ -421,4 +421,5 @@ PRODUCT_COPY_FILES += \
 
 #Extras
 PRODUCT_PACKAGES +=\
-    NexusLauncher
+    NexusLauncher \
+    MiXplorer
