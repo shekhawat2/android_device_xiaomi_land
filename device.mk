@@ -418,3 +418,7 @@ PRODUCT_COPY_FILES += \
 # apns
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/apns-conf.xml:system/etc/apns-conf.xml
+
+#Extras
+PRODUCT_PACKAGES +=\
+    NexusLauncher
