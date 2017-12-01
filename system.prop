@@ -111,6 +111,9 @@ ro.hwui.text_small_cache_height=1024
 ro.hwui.text_large_cache_width=2048
 ro.hwui.text_large_cache_height=2048
 
+# Shutdown timeout
+ro.build.shutdown_timeout=0
+
 # Media
 media.msm8956hw=0
 mm.enable.smoothstreaming=true
