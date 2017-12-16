@@ -419,6 +419,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/apns-conf.xml:system/etc/apns-conf.xml
 
+PRODUCT_PACKAGES += \
+    XiaomiParts
+
 #Extras
 PRODUCT_PACKAGES +=\
     NexusLauncher \
