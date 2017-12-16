@@ -420,7 +420,8 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/apns-conf.xml:system/etc/apns-conf.xml
 
 PRODUCT_PACKAGES += \
-    XiaomiParts
+    XiaomiParts \
+    XiaomiDoze
 
 #Extras
 PRODUCT_PACKAGES +=\
