@@ -17,6 +17,9 @@
 # Inherit proprietary files
 $(call inherit-product, vendor/xiaomi/land/land-vendor.mk)
 
+# Gapps
+$(call inherit-product, vendor/gapps/config.mk)
+
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay
 
