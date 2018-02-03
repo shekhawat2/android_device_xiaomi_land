@@ -35,7 +35,6 @@ PRODUCT_NAME := nitrogen_land
 TARGET_ARCH := arm64
 TARGET_DENSITY := xxhdpi
 IS_PHONE := true
-TARGET_MINIMAL_APPS := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
