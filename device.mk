@@ -295,13 +295,8 @@ PRODUCT_PACKAGES += \
     libandroid_net \
     libandroid_net_32
 
-# Power
 PRODUCT_PACKAGES += \
-    power.msm8937
-    
-PRODUCT_PACKAGES += \
-    android.hardware.power@1.0-service \
-    android.hardware.power@1.0-impl
+    android.hardware.power@1.0-service.land
 
 # Ramdisk
 PRODUCT_PACKAGES += \
