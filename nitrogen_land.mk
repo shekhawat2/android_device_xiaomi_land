@@ -35,6 +35,7 @@ PRODUCT_NAME := nitrogen_land
 TARGET_ARCH := arm64
 TARGET_DENSITY := xxhdpi
 IS_PHONE := true
+TARGET_BOOT_ANIMATION_RES := 720
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
