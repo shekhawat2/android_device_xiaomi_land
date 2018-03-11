@@ -20,6 +20,9 @@ $(call inherit-product, vendor/xiaomi/land/land-vendor.mk)
 # Gapps
 $(call inherit-product, vendor/gapps/config.mk)
 
+# PixelStyle
+$(call inherit-product, vendor/pixelstyle/config.mk)
+
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay
 
