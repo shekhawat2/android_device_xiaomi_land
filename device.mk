@@ -424,4 +424,5 @@ PRODUCT_PACKAGES += \
 
 #Extras
 PRODUCT_PACKAGES +=\
+    NexusLauncher \
     MiXplorer
