@@ -463,7 +463,7 @@ case "$target" in
          chown -h system /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq
          chown -h system /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq
          chown -h system /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq
-	 echo 1 > /sys/module/msm_thermal/core_control/enabled
+	 # echo 1 > /sys/module/msm_thermal/core_control/enabled
          chown -h root.system /sys/devices/system/cpu/mfreq
          chmod -h 220 /sys/devices/system/cpu/mfreq
          chown -h root.system /sys/devices/system/cpu/cpu1/online
@@ -644,7 +644,7 @@ case "$target" in
         echo 300000 > /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq
         chown -h system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
         chown -h system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-        echo 1 > /sys/module/msm_thermal/core_control/enabled
+        # echo 1 > /sys/module/msm_thermal/core_control/enabled
         chown -h root.system /sys/devices/system/cpu/mfreq
         chmod -h 220 /sys/devices/system/cpu/mfreq
         chown -h root.system /sys/devices/system/cpu/cpu1/online
@@ -847,7 +847,7 @@ case "$target" in
                 echo "interactive" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
                 echo 800000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
                 # enable thermal core_control now
-                echo 1 > /sys/module/msm_thermal/core_control/enabled
+                # echo 1 > /sys/module/msm_thermal/core_control/enabled
 
                 echo "25000 1094400:50000" > /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay
                 echo 90 > /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load
@@ -884,7 +884,7 @@ case "$target" in
                 echo "interactive" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
                 echo 800000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
                 # enable thermal core_control now
-                echo 1 > /sys/module/msm_thermal/core_control/enabled
+                # echo 1 > /sys/module/msm_thermal/core_control/enabled
 
                 echo "25000 1113600:50000" > /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay
                 echo 90 > /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load
@@ -972,7 +972,7 @@ case "$target" in
                 echo 800000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
 
                 # enable thermal core_control now
-                echo 1 > /sys/module/msm_thermal/core_control/enabled
+                # echo 1 > /sys/module/msm_thermal/core_control/enabled
 
                 # Bring up all cores online
                 echo 1 > /sys/devices/system/cpu/cpu1/online
@@ -1079,7 +1079,7 @@ case "$target" in
                 echo 800000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
 
                 # enable thermal core_control now
-                echo 1 > /sys/module/msm_thermal/core_control/enabled
+                # echo 1 > /sys/module/msm_thermal/core_control/enabled
 
                 # Bring up all cores online
                 echo 1 > /sys/devices/system/cpu/cpu1/online
@@ -1275,7 +1275,7 @@ case "$target" in
                 echo 1 > /sys/devices/system/cpu/cpu0/core_ctl/is_big_cluster
 
                 # re-enable thermal & BCL core_control now
-                echo 1 > /sys/module/msm_thermal/core_control/enabled
+                # echo 1 > /sys/module/msm_thermal/core_control/enabled
                 for mode in /sys/devices/soc.0/qcom,bcl.*/mode
                 do
                     echo -n disable > $mode
@@ -1469,7 +1469,7 @@ case "$target" in
                 echo 1 > /sys/devices/system/cpu/cpu4/core_ctl/is_big_cluster
 
                 # re-enable thermal & BCL core_control now
-                echo 1 > /sys/module/msm_thermal/core_control/enabled
+                # echo 1 > /sys/module/msm_thermal/core_control/enabled
                 for mode in /sys/devices/soc.0/qcom,bcl.*/mode
                 do
                     echo -n disable > $mode
@@ -1670,7 +1670,7 @@ case "$target" in
                 fi
                 echo 652800 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
                 # re-enable thermal & BCL core_control now
-                echo 1 > /sys/module/msm_thermal/core_control/enabled
+                # echo 1 > /sys/module/msm_thermal/core_control/enabled
                 for mode in /sys/devices/soc.0/qcom,bcl.*/mode
                 do
                     echo -n disable > $mode
@@ -1793,7 +1793,7 @@ case "$target" in
                 fi
                 echo 960000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
                 # re-enable thermal core_control now
-                echo 1 > /sys/module/msm_thermal/core_control/enabled
+                # echo 1 > /sys/module/msm_thermal/core_control/enabled
 
                 # Disable L2-GDHS low power modes
                 echo N > /sys/module/lpm_levels/perf/perf-l2-gdhs/idle_enabled
@@ -1909,7 +1909,7 @@ case "$target" in
                 echo 1 > /sys/devices/system/cpu/cpu0/core_ctl/is_big_cluster
 
                 # re-enable thermal core_control
-                echo 1 > /sys/module/msm_thermal/core_control/enabled
+                # echo 1 > /sys/module/msm_thermal/core_control/enabled
 
                 # Enable dynamic clock gating
                 echo 1 > /sys/module/lpm_levels/lpm_workarounds/dynamic_clock_gating
@@ -2052,7 +2052,7 @@ case "$target" in
             echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
 
             # re-enable thermal and BCL hotplug
-            echo 1 > /sys/module/msm_thermal/core_control/enabled
+            # echo 1 > /sys/module/msm_thermal/core_control/enabled
 
             # Set Memory parameters
             configure_memory_parameters
@@ -2206,7 +2206,7 @@ case "$target" in
             echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
 
             # re-enable thermal and BCL hotplug
-            echo 1 > /sys/module/msm_thermal/core_control/enabled
+            # echo 1 > /sys/module/msm_thermal/core_control/enabled
             for mode in /sys/devices/soc.0/qcom,bcl.*/mode
             do
                 echo -n disable > $mode
@@ -2312,7 +2312,7 @@ case "$target" in
         echo 300000 > /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq
         echo 300000 > /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq
         echo 300000 > /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq
-        echo 1 > /sys/module/msm_thermal/core_control/enabled
+        # echo 1 > /sys/module/msm_thermal/core_control/enabled
         setprop ro.qualcomm.perf.cores_online 2
         chown -h  system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
         chown -h system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
@@ -2365,7 +2365,7 @@ case "$target" in
         echo 300000 > /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq
         echo 300000 > /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq
         echo 300000 > /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq
-        echo 1 > /sys/module/msm_thermal/core_control/enabled
+        # echo 1 > /sys/module/msm_thermal/core_control/enabled
         chown -h  system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
         chown -h system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
         chown -h root.system /sys/devices/system/cpu/mfreq
@@ -2417,7 +2417,7 @@ case "$target" in
         echo 80000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/max_freq_hysteresis
         echo 384000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
         # re-enable thermal and BCL hotplug
-        echo 1 > /sys/module/msm_thermal/core_control/enabled
+        # echo 1 > /sys/module/msm_thermal/core_control/enabled
         echo -n disable > /sys/devices/soc.*/qcom,bcl.*/mode
         echo $bcl_hotplug_mask > /sys/devices/soc.*/qcom,bcl.*/hotplug_mask
         echo $bcl_soc_hotplug_mask > /sys/devices/soc.*/qcom,bcl.*/hotplug_soc_mask
@@ -2502,7 +2502,7 @@ case "$target" in
         # restore A57's max
         cat /sys/devices/system/cpu/cpu4/cpufreq/cpuinfo_max_freq > /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
         # re-enable thermal and BCL hotplug
-        echo 1 > /sys/module/msm_thermal/core_control/enabled
+        # echo 1 > /sys/module/msm_thermal/core_control/enabled
         for mode in /sys/devices/soc.0/qcom,bcl.*/mode
         do
             echo -n disable > $mode
@@ -2590,7 +2590,7 @@ case "$target" in
         echo 300000 > /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq
         echo 1 > /sys/devices/system/cpu/cpu2/cpufreq/interactive/ignore_hispeed_on_notif
         # re-enable thermal and BCL hotplug
-        echo 1 > /sys/module/msm_thermal/core_control/enabled
+        # echo 1 > /sys/module/msm_thermal/core_control/enabled
         echo -n disable > /sys/devices/soc/soc:qcom,bcl/mode
         echo $bcl_hotplug_mask > /sys/devices/soc/soc:qcom,bcl/hotplug_mask
         echo $bcl_soc_hotplug_mask > /sys/devices/soc/soc:qcom,bcl/hotplug_soc_mask
@@ -2849,7 +2849,7 @@ case "$target" in
 	echo 1 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/ignore_hispeed_on_notif
 
         # re-enable thermal and BCL hotplug
-        echo 1 > /sys/module/msm_thermal/core_control/enabled
+        # echo 1 > /sys/module/msm_thermal/core_control/enabled
 
         # Enable input boost configuration
         echo "0:1324800" > /sys/module/cpu_boost/parameters/input_boost_freq
@@ -2981,7 +2981,7 @@ case "$target" in
         echo "interactive" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
         echo 800000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
         # enable thermal core_control now
-        echo 1 > /sys/module/msm_thermal/core_control/enabled
+        # echo 1 > /sys/module/msm_thermal/core_control/enabled
 
         echo "29000 1094400:49000" > /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay
         echo 90 > /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load
